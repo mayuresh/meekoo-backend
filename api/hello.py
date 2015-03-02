@@ -12,5 +12,6 @@ if __name__ == "__main__":
     PORT = 5000
     if os.environ["PORT"]:
         PORT = int(os.environ["PORT"])
-            
+    print("PORT = %s" % (PORT))
     app.run(port=PORT)
+    print("Application running on port %s" % (PORT))

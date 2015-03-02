@@ -1,1 +1,1 @@
-web: python api/hello.py
+web: python hello.py
