@@ -9,4 +9,8 @@ def hello():
     return "Hello World!"
 
 if __name__ == "__main__":
-    app.run(port= os.environ["PORT"] | 5000)
+    PORT = 5000
+    if os.environ["PORT"]:
+        PORT = int(os.environ["PORT"])
+            
+    app.run(port=PORT)
