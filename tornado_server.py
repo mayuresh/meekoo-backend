@@ -8,7 +8,7 @@ import os
 from hello import app
 
 PORT = 5000
-if os.environ["PORT"]:
+if "PORT" in os.environ.keys():
     PORT = int(os.environ["PORT"])
 
 http_server = HTTPServer(WSGIContainer(app))
